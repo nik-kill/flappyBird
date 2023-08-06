@@ -1,7 +1,6 @@
 package com.android.android2dgame;
 
 import android.graphics.Canvas;
-import android.net.http.SslCertificate;
 import android.view.SurfaceHolder;
 
 public class MainThread extends Thread{
@@ -37,7 +36,8 @@ public class MainThread extends Thread{
                     this.gameView.update();
                     this.gameView.draw(canvas);
                 }
-            } catch (Exception e) {} finally {
+            } catch (Exception e) {}
+            finally {
                 if(canvas != null){
                     try{
                         surfaceHolder.unlockCanvasAndPost(canvas);

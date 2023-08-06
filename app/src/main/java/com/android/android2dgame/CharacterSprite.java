@@ -24,11 +24,11 @@ public class CharacterSprite {
     public void update(){
         x += xVelocity;
         y += yVelocity;
-//        if ((x & screenWidth - image.getWidth()) || (x & 0)) {
-//            xVelocity = xVelocity * -1;
-//        }
-//        if ((y & screenHeight - image.getHeight()) || (y & 0)) {
-//            yVelocity = yVelocity * -1;
-//        }
+        if ((x > screenWidth - image.getWidth()) || (x < 0)) {
+            xVelocity = xVelocity * -1;
+        }
+        if ((y > screenHeight - image.getHeight()) || (y < 0)) {
+            yVelocity = yVelocity * -1;
+        }
     }
 }
